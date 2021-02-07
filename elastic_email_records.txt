@@ -1,0 +1,36 @@
+--------------------------------------------------------------------------
+SPF | Elastic Email
+--------------------------------------------------------------------------
+Record Type: TXT
+Host/Name: "@" OR EMPTY
+v=spf1 a mx include:_spf.elasticemail.com include:emailsrvr.com ~all
+
+View Image Example here : https://i.ibb.co/vwZbShr/spf.png
+
+--------------------------------------------------------------------------
+DKIM | Elastic Email
+--------------------------------------------------------------------------
+Record Type: TXT
+Host/Name: api._domainkey
+Value: k=rsa;t=s;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCbmGbQMzYeMvxwtNQoXN0waGYaciuKx8mtMh5czguT4EZlJXuCt6V+l56mmt3t68FEX5JJ0q4ijG71BGoFRkl87uJi7LrQt1ZZmZCvrEII0YO4mp8sDLXC8g1aUAoi8TJgxq2MJqCaMyj5kAm3Fdy2tzftPCV/lbdiJqmBnWKjtwIDAQAB
+(Yes, it really is this long list of numbers and letters, make sure you copy and paste correctly)
+
+View Image Example here : https://i.ibb.co/tcRPCVd/api-domainkey.png
+
+--------------------------------------------------------------------------
+DMARC | Elastic Email
+--------------------------------------------------------------------------
+Record Type: TXT
+Host/Name: _dmarc
+Value: v=DMARC1;p=none;pct=100;aspf=r;adkim=r;
+
+View Image Example here : https://i.ibb.co/1zy5LQY/dmarc.png
+
+--------------------------------------------------------------------------
+CNAME | Elastic Email
+--------------------------------------------------------------------------
+Record Type: CNAME
+Host/Name: tracking
+Value: api.elasticemail.com
+
+View Image Example here : https://i.ibb.co/MGMthp7/tracking.png
